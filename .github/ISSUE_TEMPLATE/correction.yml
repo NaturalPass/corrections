@@ -1,0 +1,51 @@
+name: Report a problem with a value
+description: Tell us a value on naturalpass.org looks wrong, out of date or unclear.
+title: "Correction: "
+labels: [correction]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The link on each value fills in the first six fields. Please check them, then tell us what's wrong.
+  - type: input
+    id: state
+    attributes:
+      label: State
+    validations:
+      required: true
+  - type: input
+    id: metric
+    attributes:
+      label: Metric ID
+      description: The measure's ID, such as visitor_spending.
+  - type: input
+    id: period
+    attributes:
+      label: Period
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: The source title or ID shown in the value's panel.
+  - type: input
+    id: version
+    attributes:
+      label: Data version
+      description: Shown at the top of the data page, such as 0.2.0.
+  - type: input
+    id: fact_id
+    attributes:
+      label: Fact ID
+      description: Under Advanced in the value's panel.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong
+      description: The value you expected and why.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Where you saw it
+      description: A link, document title and page or table, if you have one.
